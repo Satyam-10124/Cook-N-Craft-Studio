@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cook & Craft Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+    <div id="particles-js"></div> <!-- Particle background -->
+
+    <h1><a href="index.html" class="main" >Welcome to Cook & Craft Studio</a></h1>
+    <h2>Learn and Cook Amazing Food for Your Loved Ones</h2>
+
+    <div>
+        <h3></h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/PKQHs7DuweM?si=-li8nK0vfnrpCB3E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div>
+        <h3>Explore Our Cuisines</h3>
+        <br><br>
+
+        <div class="cuisine-item">
+            <a href="north.html" class="main" >North Indian</a>
+            
+            <div class="content"><p><a href="https://economictimes.indiatimes.com/news/web-stories/most-famous-dishes-of-north-india/slideshow/106374403.cms?from=mdr">>Punjabi cuisine</a> known for its strong flavors, aromatic spices, and complexity. Some of the dishes that are part of North Indian cuisine includes:Chole Bhature , Dal Makhni , Lassi etc</p></div>
+            
+            <div class="star-rating" data-recipe="north">
+                <span class="star" data-value="1">&#9734;</span>
+                <span class="star" data-value="2">&#9734;</span>
+                <span class="star" data-value="3">&#9734;</span>
+                <span class="star" data-value="4">&#9734;</span>
+                <span class="star" data-value="5">&#9734;</span>
+            </div>
+        </div>
+
+        <div class="cuisine-item">
+            <a href="south.html" class="main" >South Indian</a>
+            <div class="content"><p><a href="https://en.wikipedia.org/wiki/South_Indian_cuisine">South Indian</a> food is generally lighter and rice-based, and often includes the following dishes: Dosa , Uttpam , Idli.</p></div>
+            <div class="star-rating" data-recipe="south">
+                <span class="star" data-value="1">&#9734;</span>
+                <span class="star" data-value="2">&#9734;</span>
+                <span class="star" data-value="3">&#9734;</span>
+                <span class="star" data-value="4">&#9734;</span>
+                <span class="star" data-value="5">&#9734;</span>
+            </div>
+        </div>
+
+        <div class="cuisine-item">
+            <a href="indori.html" class="main" >Indori Tadka</a>
+            <div class="content"><p>As <a href="https://www.holidify.com/pages/indore-famous-food-1500.html">street food</a>  culture is a true representation of India and its dynamic culture, Indore is famous for its street food hubs, like Chhappan Dukan and Sarafa Chaat Chaupati, that serve up everything from local specialties like Bhutte ka kees, Poha, Rabdi-Jalebi, Malpua, Samosa, Kachori, Garadu etc. to North Indian, South</p></div>
+            <div class="star-rating" data-recipe="indori">
+                <span class="star" data-value="1">&#9734;</span>
+                <span class="star" data-value="2">&#9734;</span>
+                <span class="star" data-value="3">&#9734;</span>
+                <span class="star" data-value="4">&#9734;</span>
+                <span class="star" data-value="5">&#9734;</span>
+            </div>
+        </div>
+
+        <div class="cuisine-item">
+            <a href="gujju.html" class="main">Gujju's Special</a>
+            <div class="content"><p><a href="https://www.gujarattourism.com/gujarati-cuisines.html?cid=14">Gujarati cuisine</a> is known for its use of fresh, locally sourced ingredients and its emphasis on vegetarian dishes. The food is influenced by Jain, Hindu, and Muslim traditions and is often rich in fiber, vitamins, and minerals. Here are some popular Gujarati dishes</p></div>
+            <div class="star-rating" data-recipe="gujju">
+                <span class="star" data-value="1">&#9734;</span>
+                <span class="star" data-value="2">&#9734;</span>
+                <span class="star" data-value="3">&#9734;</span>
+                <span class="star" data-value="4">&#9734;</span>
+                <span class="star" data-value="5">&#9734;</span>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div>
+        <h3>Have a Query? Send us a message!</h3>
+        <form id="queryForm">
+            <label for="userQuery">Your Query:</label><br>
+            <textarea id="userQuery" name="userQuery" rows="4" cols="50" required></textarea><br><br>
+            <input type="submit" value="Send Query" class="button">
+            <input type="reset" value="Clear" class="button">
+        </form>
+        <p id="confirmationMessage"></p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Cook & Craft Studio. All rights reserved.</p>
+    </footer>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

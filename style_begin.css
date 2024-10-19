@@ -1,0 +1,182 @@
+/* General body styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5; /* Light background */
+    color: #333; /* Dark text color for contrast */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    overflow: hidden; /* Ensure particles don't create scrollbars */
+    position: relative; /* For positioning the droplets */
+}
+
+
+
+/* Container to center content vertically and horizontally */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Heading styling */
+h1{
+    font-size: 2.5rem;
+    color: #373B44; /* Elegant dark color */
+    margin-bottom: 1em;
+    position: relative; /* For positioning the underline */
+    overflow: hidden; /* Ensure underline stays within boundaries */
+    transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Create the underline */
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color); /* Underline color matching the hover color */
+    transition: width 0.3s ease;
+}
+
+/* Hover effect */
+h1:hover {
+    color: #007BFF; /* Change to a vibrant blue color */
+    text-shadow: 0 4px 6px rgba(0, 123, 255, 0.5); /* Glowing shadow effect */
+    transform: scale(1.05); /* Slightly scale the text */
+}
+
+h1:hover::after {
+    width: 100%; /* Expand underline to full width on hover */
+}
+
+/* Button styling */
+.button-89,
+a.button-89 {
+    --b: 3px;   /* Border thickness */
+    --s: .45em; /* Size of the corner */
+    --color: #373B44; /* Button color */
+    
+    padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+    color: var(--color);
+    --_p: var(--s);
+    background:
+      conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+      var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s ease-in-out, color 0s, background-color 0s;
+    border: none; /* Ensure no border */
+    outline: none; /* Ensure no outline */
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Align with text content */
+    text-align: center; /* Center text inside */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Hover/Focus effect */
+.button-89:hover,
+.button-89:focus-visible {
+    --_p: 0px;
+    outline-color: var(--color); /* This is if you want the outline effect on focus */
+    outline-offset: .05em;
+}
+
+/* Active effect */
+.button-89:active {
+    background: var(--color);
+    color: #fff;
+    box-shadow: none; /* Optional: remove shadow on active state */
+}
+
+/* Pulse animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Optional: Add a subtle shadow to make the button stand out more */
+.button-89 {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: Additional hover effects */
+.button-89:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Droplet animations */
+.droplet {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5); /* Default dark color with some transparency */
+    opacity: 0.8; /* Slightly opaque */
+    pointer-events: none;
+    animation: fall 4s linear infinite;
+}
+
+/* Blue color for droplets when heading is hovered */
+.droplet.blue-drops {
+    background: rgba(0, 123, 255, 0.5); /* Blue color with some transparency */
+}
+
+/* Keyframes for droplet animation */
+@keyframes fall {
+    from {
+        transform: translateY(-10vh);
+        opacity: 0.8;
+    }
+    to {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+/* Ensure droplets are placed properly and vary in size */
+.droplet:nth-of-type(1) {
+    width: 10px;
+    height: 10px;
+    left: 10%;
+    animation-duration: 3s;
+}
+.droplet:nth-of-type(2) {
+    width: 15px;
+    height: 15px;
+    left: 30%;
+    animation-duration: 4s;
+}
+.droplet:nth-of-type(3) {
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    animation-duration: 5s;
+}
+.droplet:nth-of-type(4) {
+    width: 12px;
+    height: 12px;
+    left: 70%;
+    animation-duration: 3.5s;
+}
+.droplet:nth-of-type(5) {
+    width: 8px;
+    height: 8px;
+    left: 90%;
+    animation-duration: 4.5s;
+}
